@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loveMessage = document.getElementById('love-message');
 
     // Set your custom message here with a love symbol
-    const customMessage = "I am always there for you my love 💖"; // Change the message and symbol as needed
+    const customMessage = " "; // Change the message and symbol as needed
 
     // Set the custom message in the element
     loveMessage.textContent = customMessage;
