@@ -1494,3 +1494,244 @@ ul {
     justify-content: center;
   }
 }
+
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
+.skills {
+  padding: 7rem 0;
+
+  background: var(--bg-primary);
+}
+
+
+/* ---------------------------------------------------------
+   Skills Header
+   --------------------------------------------------------- */
+
+.skills-header {
+  max-width: 720px;
+
+  margin-bottom: 3.5rem;
+}
+
+.skills-intro {
+  max-width: 600px;
+
+  margin-top: 1.25rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   Skills Grid
+   --------------------------------------------------------- */
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+
+/* ---------------------------------------------------------
+   Skill Category Card
+   --------------------------------------------------------- */
+
+.skill-category {
+  position: relative;
+
+  padding: 1.75rem;
+
+  min-height: 230px;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-medium);
+
+  background:
+    rgba(255, 255, 255, 0.02);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
+}
+
+.skill-category:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(167, 139, 250, 0.35);
+
+  background:
+    rgba(139, 92, 246, 0.045);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ---------------------------------------------------------
+   Card Header
+   --------------------------------------------------------- */
+
+.skill-category-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.skill-number {
+  color: var(--accent-light);
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.skill-category-header h3 {
+  color: var(--text-primary);
+
+  font-size: 1.05rem;
+
+  font-weight: 650;
+}
+
+
+/* ---------------------------------------------------------
+   Skill List
+   --------------------------------------------------------- */
+
+.skill-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+}
+
+.skill-list span {
+  padding: 0.5rem 0.75rem;
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: var(--text-secondary);
+
+  font-size: 0.75rem;
+
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background var(--transition),
+    transform var(--transition);
+}
+
+.skill-list span:hover {
+  color: var(--text-primary);
+
+  border-color:
+    rgba(167, 139, 250, 0.4);
+
+  background:
+    rgba(139, 92, 246, 0.08);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SKILLS RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .skills {
+    padding: 6rem 0;
+  }
+
+  .skills-grid {
+    gap: 1rem;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .skills {
+    padding: 5rem 0;
+  }
+
+  .skills-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .skills-intro {
+    font-size: 0.88rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category {
+    min-height: auto;
+
+    padding: 1.35rem;
+  }
+
+  .skill-category-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-list span {
+    font-size: 0.72rem;
+
+    padding: 0.45rem 0.65rem;
+  }
+}
+
+/* =========================================================
+   SKILLS STAGGER ANIMATION
+   ========================================================= */
+
+.skill-category:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.skill-category:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.skill-category:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.skill-category:nth-child(4) {
+  transition-delay: 0.26s;
+}
