@@ -2428,3 +2428,387 @@ ul {
   }
 
 }
+
+/* =========================================================
+   EXPERIENCE SECTION
+   ========================================================= */
+
+.experience {
+  padding: 7rem 0;
+
+  background: var(--bg-primary);
+}
+
+
+/* ---------------------------------------------------------
+   Header
+   --------------------------------------------------------- */
+
+.experience-header {
+  max-width: 720px;
+
+  margin-bottom: 4rem;
+}
+
+.experience-intro {
+  max-width: 600px;
+
+  margin-top: 1.25rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPERIENCE TIMELINE
+   ========================================================= */
+
+.experience-timeline {
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 3rem;
+
+  max-width: 1050px;
+}
+
+
+/* ---------------------------------------------------------
+   Timeline Marker
+   --------------------------------------------------------- */
+
+.timeline-marker {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  min-height: 430px;
+}
+
+.timeline-year {
+  padding: 0.65rem 0.85rem;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  background:
+    rgba(139, 92, 246, 0.06);
+
+  color: var(--accent-light);
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.timeline-line {
+  width: 1px;
+
+  flex: 1;
+
+  margin: 0.75rem 0;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(167, 139, 250, 0.45),
+      rgba(167, 139, 250, 0.08));
+}
+
+.timeline-present {
+  color: var(--text-muted);
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   EXPERIENCE CONTENT
+   ========================================================= */
+
+.experience-content {
+  position: relative;
+
+  padding-left: 2.5rem;
+
+  border-left: 1px solid var(--border);
+}
+
+
+/* ---------------------------------------------------------
+   Role Header
+   --------------------------------------------------------- */
+
+.experience-role {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding-bottom: 2rem;
+}
+
+.experience-company {
+  margin-bottom: 0.5rem;
+
+  color: var(--accent-light);
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.experience-role h3 {
+  color: var(--text-primary);
+
+  font-size: clamp(1.5rem,
+      2.5vw,
+      2.1rem);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.experience-company-name {
+  margin-top: 0.45rem;
+
+  color: var(--text-muted);
+
+  font-size: 0.85rem;
+}
+
+.experience-status {
+  white-space: nowrap;
+
+  padding: 0.45rem 0.75rem;
+
+  border: 1px solid rgba(167, 139, 250, 0.25);
+
+  border-radius: 999px;
+
+  background:
+    rgba(139, 92, 246, 0.06);
+
+  color: var(--accent-light);
+
+  font-size: 0.7rem;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EXPERIENCE POINTS
+   ========================================================= */
+
+.experience-points {
+  display: grid;
+
+  gap: 1rem;
+
+  max-width: 720px;
+}
+
+.experience-points p {
+  position: relative;
+
+  padding-left: 1.25rem;
+
+  color: var(--text-secondary);
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+.experience-points p::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0.65rem;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--accent-light);
+
+  box-shadow:
+    0 0 10px rgba(167, 139, 250, 0.45);
+}
+
+
+/* =========================================================
+   EXPERIENCE TECHNOLOGY STACK
+   ========================================================= */
+
+.experience-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.65rem;
+
+  margin-top: 2rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--border);
+}
+
+.experience-tech span {
+  padding: 0.5rem 0.75rem;
+
+  border: 1px solid var(--border);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: var(--text-secondary);
+
+  font-size: 0.72rem;
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.experience-tech span:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(167, 139, 250, 0.4);
+
+  background:
+    rgba(139, 92, 246, 0.07);
+}
+
+
+/* =========================================================
+   EXPERIENCE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .experience {
+    padding: 6rem 0;
+  }
+
+  .experience-timeline {
+    grid-template-columns: 85px 1fr;
+
+    gap: 2rem;
+  }
+
+  .experience-content {
+    padding-left: 2rem;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .experience {
+    padding: 5rem 0;
+  }
+
+  .experience-header {
+    margin-bottom: 2.75rem;
+  }
+
+  .experience-intro {
+    font-size: 0.88rem;
+  }
+
+  .experience-timeline {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+
+  /* Simplified mobile timeline */
+
+  .timeline-marker {
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    min-height: auto;
+
+    gap: 0.75rem;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .timeline-present {
+    font-size: 0.62rem;
+  }
+
+
+  .experience-content {
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+  .experience-role {
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding-bottom: 1.5rem;
+  }
+
+  .experience-role h3 {
+    font-size: 1.45rem;
+  }
+
+  .experience-points {
+    gap: 0.9rem;
+  }
+
+  .experience-points p {
+    padding-left: 1rem;
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+  }
+
+  .experience-tech {
+    margin-top: 1.5rem;
+
+    padding-top: 1.25rem;
+  }
+
+}
