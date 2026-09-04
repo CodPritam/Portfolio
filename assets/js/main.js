@@ -253,3 +253,29 @@ if (revealElements.length > 0) {
 
     });
 }
+/* ==================== CERTIFICATION CARD FLIP ==================== */
+
+const certCards = document.querySelectorAll('.cert-card');
+
+certCards.forEach((card) => {
+
+    card.addEventListener('click', function (event) {
+
+        // Don't flip when clicking the credential link
+        if (event.target.closest('.cert-card-back a')) {
+            return;
+        }
+
+        // Close other flipped cards
+        certCards.forEach((otherCard) => {
+            if (otherCard !== card) {
+                otherCard.classList.remove('flipped');
+            }
+        });
+
+        // Toggle current card
+        card.classList.toggle('flipped');
+
+    });
+
+});

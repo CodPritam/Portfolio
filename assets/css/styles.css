@@ -2812,3 +2812,360 @@ ul {
   }
 
 }
+/* =========================================================
+   EDUCATION & CREDENTIALS SECTION
+   ========================================================= */
+
+.credentials {
+    padding: 7rem 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+}
+
+
+/* ==================== HEADER ==================== */
+
+.credentials-header {
+    max-width: 720px;
+    margin-bottom: 4rem;
+}
+
+.credentials-intro {
+    max-width: 600px;
+    margin-top: 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   EDUCATION BLOCK
+   ========================================================= */
+
+.education-block {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color var(--transition), transform var(--transition);
+}
+
+.education-block:hover {
+    transform: translateY(-3px);
+    border-color: rgba(167, 139, 250, 0.3);
+}
+
+.education-label {
+    color: var(--accent-light);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.education-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.education-degree h3 {
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.education-institution {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.education-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    white-space: nowrap;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+}
+
+.education-status {
+    padding: 0.4rem 0.7rem;
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    border-radius: 999px;
+    color: var(--accent-light);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+
+.certifications-wrapper {
+    margin-top: 5rem;
+}
+
+.certifications-heading {
+    margin-bottom: 2rem;
+}
+
+.certifications-label {
+    margin-bottom: 0.5rem;
+    color: var(--accent-light);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.certifications-heading > p:last-child {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CERTIFICATION GRID
+   ========================================================= */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+
+/* =========================================================
+   CERTIFICATION FLIP CARD
+   ========================================================= */
+
+.cert-card {
+    min-height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.cert-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+
+/* Desktop Hover */
+
+@media (hover: hover) {
+
+    .cert-card:hover .cert-card-inner {
+        transform: rotateY(180deg);
+    }
+
+}
+
+
+/* Mobile / Touch Flip */
+
+.cert-card.flipped .cert-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* =========================================================
+   CARD FRONT & BACK
+   ========================================================= */
+
+.cert-card-front,
+.cert-card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* ==================== FRONT ==================== */
+
+.cert-card-front {
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.cert-card:hover .cert-card-front {
+    border-color: rgba(167, 139, 250, 0.35);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==================== BACK ==================== */
+
+.cert-card-back {
+    background: linear-gradient(
+        145deg,
+        rgba(139, 92, 246, 0.13),
+        rgba(255, 255, 255, 0.025)
+    );
+
+    transform: rotateY(180deg);
+}
+
+
+/* =========================================================
+   CERTIFICATION CONTENT
+   ========================================================= */
+
+.cert-provider {
+    margin-bottom: 1rem;
+    color: var(--accent-light);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.cert-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    border-radius: 18px;
+    background: rgba(139, 92, 246, 0.08);
+    color: var(--accent-light);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.cert-card-front h3,
+.cert-card-back h3 {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.cert-card-front > p:last-child {
+    margin-top: 0.45rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   BACK CONTENT
+   ========================================================= */
+
+.cert-code {
+    margin-top: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.cert-card-back a {
+    margin-top: 1.5rem;
+    color: var(--accent-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform var(--transition), color var(--transition);
+}
+
+.cert-card-back a:hover {
+    transform: translateX(3px);
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .certifications-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .credentials {
+        padding: 6rem 0;
+    }
+
+    .education-block {
+        grid-template-columns: 120px 1fr;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .credentials {
+        padding: 5rem 0;
+    }
+
+    .credentials-header {
+        margin-bottom: 2.75rem;
+    }
+
+    .credentials-intro {
+        font-size: 0.88rem;
+    }
+
+    /* Education */
+
+    .education-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .education-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .education-meta {
+        align-items: flex-start;
+    }
+
+    /* Certifications */
+
+    .certifications-wrapper {
+        margin-top: 3.5rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .cert-card,
+    .cert-card-inner {
+        min-height: 230px;
+    }
+
+}
